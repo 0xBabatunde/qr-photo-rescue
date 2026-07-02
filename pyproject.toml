@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qr-photo-rescue"
+version = "0.1.0"
+description = "Recover damaged photographed QR codes by reconstructing the module grid from finder/alignment geometry."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "QR Photo Rescue contributors" }]
+dependencies = [
+  "numpy>=1.24,<2",
+  "opencv-python-headless==4.8.1.78",
+  "Pillow>=10",
+  "zxing-cpp>=2",
+]
+
+[project.scripts]
+qr-photo-rescue = "qr_photo_rescue.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qr_photo_rescue*"]
