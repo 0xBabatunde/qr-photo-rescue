@@ -1,5 +1,7 @@
 # QR Photo Rescue
 
+![QR Photo Rescue](docs/screenshot.png)
+
 Recover hard-to-scan photographed QR codes by reconstructing the QR module grid from visible geometry.
 
 This repo was born from a real rescue: a WhatsApp QR code photographed at an angle, partially covered by yellow scanner brackets and a center logo. Normal decoders could see QR-like structure but could not recover the payload. The breakthrough was to stop asking detectors to find the code and instead rebuild a clean QR image from the visible finder-pattern and alignment-pattern centers.
